@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="src/app.js" defer></script>
+</head>
+
+<body>
+    <div id="app">
+        <form id="app-form">
+            <input type="text" v-model="input_name" placeholder="Digite seu nome" />
+            <!-- O v-model no Vue 3 é uma diretiva que cria uma ligação bidirecional (two-way binding) entre um elemento de 
+             formulário HTML (como <input>, <textarea>, <select>) e uma propriedade no estado do componente. Isso significa 
+             que, quando o valor do formulário mudar, o valor da propriedade no estado do componente é atualizado automaticamente, 
+             e que, quando o valor do elemento de formulário muda, o valor da propriedade no estado do componente é 
+             atualizado automaticamente, e vice-versa.-->
+            <input type="submit" value="Enviar" v.on:click="submitForm" />
+        </form>
+        <p>Olá, meu nome é {{ name }}</p>
+        <p>Data biding: {{ input_name }}</p>
+
+    </div>
+
+</body>
+
+</html>
